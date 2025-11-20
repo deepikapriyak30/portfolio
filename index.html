@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Section</title>
+<!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
 <style>
-
   .about-section {
     text-align: center;
     padding: 50px 0;
@@ -17,93 +17,158 @@
     margin-bottom: 20px;
   }
   .about-section img {
-    width: 200px;
+    width: 200px; /* Adjust the size as needed */
     height: 200px;
-    border-radius: 50%;
+    border-radius: 50%; /* Makes the image round */
     margin-bottom: 20px;
   }
-
-  /* PROJECTS */
-  .projects-section h2 {
-    margin-bottom: 40px;
-    font-size: 2.5rem;
-  }
-  .card {
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-  .card-img-top {
-    max-height: 180px;
-    object-fit: cover;
+  .about-section p {
+    color: #333;
   }
 
-  /* SKILLS */
-  .skills-section h2 {
-    margin-bottom: 40px;
-    font-size: 2.5rem;
-  }
-  .skills-section .card-img-top {
-    padding: 20px;
-    background-color: #f8f9fa;
-    height: 180px;
-    object-fit: contain;
-  }
+  /* Additional CSS for Projects Section */
+.projects-section h2 {
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+}
+.card {
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Adds a subtle shadow around the card */
+}
+.card-img-top {
+  max-height: 180px; /* Adjust this value to fit the image properly in the card */
+  object-fit: cover; /* This makes sure the image covers the area properly */
+}
+.card-body {
+  padding: 15px;
+}
+.card-title {
+  font-size: 1.25rem;
+}
+.card-text {
+  margin-bottom: 15px;
+}
 
-  /* CONTACT */
-  .contact-section {
-    padding: 50px 0;
-  }
-  .social-icon {
-    width: 50px;
-    margin-bottom: 10px;
-  }
+/* Additional CSS for Skills Section */
+.skills-section h2 {
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+}
+.skills-section .card {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.skills-section .card-img-top {
+  padding: 20px; /* Add padding around your images if needed */
+  background-color: #f8f9fa; /* Adjust the background color if your images have transparent areas */
+  height: 180px; /* Fixed height for consistency */
+  object-fit: contain; /* This will make sure the image is scaled properly within the container */
+}
+.skills-section .card-body {
+  padding: 15px;
+}
+.skills-section .card-title {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+}
+.skills-section .btn-outline-primary {
+  color: #007bff;
+  border-color: #007bff;
+}
+.skills-section .btn-outline-primary:hover {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
 
-  /* NAVBAR */
-  .navbar {
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  }
+/* Additional CSS for Contact Section */
+.contact-section {
+  padding: 50px 0;
+}
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+.contact-section p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.social-icon {
+  width: 50px; /* Size of your icons */
+  margin-bottom: 10px;
+}
+/* Hover effect for icons */
+.social-icon:hover {
+  opacity: 0.7;
+}
+/* Style for links in the Contact section */
+.contact-section a {
+  color: #fff;
+  text-decoration: none; /* Removes underline from links */
+  display: inline-block; /* Allows for margin on the bottom */
+  margin-bottom: 10px;
+}
+.contact-section a:hover {
+  color: #ddd; /* Color when hovering over the link */
+}
 
-  /* ❤️ FIXED SPACING */
-  body {
-    padding-top: 120px; /* FINAL FIX */
-  }
+/* CSS for Sticky Navbar */
+.navbar {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adds a shadow for depth */
+}
 
-  .navbar-nav .nav-link {
-    color: white;
-  }
-  .navbar-nav .nav-link:hover {
-    color: #f8f9fa;
-  }
+/* Ensure padding is added to body to avoid content being hidden behind the navbar */
+body { 
+  padding-top: 56px; /* Adjust this value based on the height of your navbar */
+}
 
-  .navbar-brand {
-    font-weight: 600;
-  }
-  .brand-tagline {
-    font-size: 0.75rem;
-    color: #dcdcdc;
-    margin-left: 0.35rem;
-  }
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
 
-  .btn-resume {
-    margin-left: 1rem;
-    font-size: 0.8rem;
-    padding: 0.25rem 0.8rem;
-    margin-top: -4px;
-  }
+/* Style for navigation bar links */
+.navbar-nav .nav-link {
+  color: white;
+}
 
-  @media (max-width: 992px) {
-    .navbar-collapse {
-      background-color: #343a40;
-      align-items: center;
-      padding-top: 160px;
-    }
+.navbar-nav .nav-link:hover {
+  color: #f8f9fa; /* Slightly lighter white when hovering over links */
+}
+
+/* --- Brand title + tagline in navbar --- */
+.navbar-brand {
+  font-weight: 600;
+}
+
+.brand-tagline {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #dcdcdc;          /* softer than pure white */
+  margin-left: 0.35rem;
+}
+
+/* Small resume button in navbar */
+.btn-resume {
+  margin-left: 1rem;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.8rem;
+  align-self: center;
+}
+  
+/* Media query for responsive navbar collapsing */
+@media (max-width: 992px) {
+  .navbar-collapse {
+    background-color: #343a40; /* Same as navbar color for seamless look */
+    align-items: center;
   }
+}
+
 
 </style>
-</head>
 
+</head>
 <body>
 
-<!-- NAVBAR -->
+  <!-- Sticky Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
      <a class="navbar-brand" href="#about">
@@ -112,58 +177,91 @@
            · Data Analyst · Python | SQL | Power BI | Tableau
        </span>
      </a>
-
-     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-       <span class="navbar-toggler-icon"></span>
-     </button>
-
-     <div class="collapse navbar-collapse" id="navbarNav">
-       <ul class="navbar-nav ml-auto">
-         <li class="nav-item"><a class="nav-link" href="#about">Home</a></li>
-         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-         <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-         <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-
-         <li class="nav-item">
-            <a href="images/certificate/resume.pdf"
-               class="btn btn-outline-light btn-sm btn-resume"
-               target="_blank">
-             Download Resume
-            </a>
-         </li>
-       </ul>
-     </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#about">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+        <!-- Small Download Resume button -->
+        <li class="nav-item">
+        <a href="images/certificate/resume.pdf"
+         class="btn btn-outline-light btn-sm btn-resume"
+         target="_blank">
+        Download Resume
+        </a>
+       </li>
+      </ul>
+    </div>
   </div>
 </nav>
-
-
-<!-- ABOUT -->
+  
 <section id='about' class="about-section">
   <div class="container">
     <h2>About</h2>
     <img src="images/about/1.jpg" alt="About Me">
-    <p>I am a Junior Data Analyst with experience in SQL, Python, Power BI, Tableau, and EDA.</p>
-    <p>I have completed analytics internships where I gained experience in cleaning, visualization, forecasting, and end-to-end project workflows.</p>
+    <p>I am a Junior Data Analyst with experience in SQL, Python, Power BI, Tableau, and EDA. I began my career as a Software Engineer working on SQL/PLSQL-based data operations, workflow automation, and custom dashboards, which sparked my interest in data.</p>
+    <p>I have since completed analytics internships where I gained hands-on experience in data cleaning, visualization, forecasting, and building end-to-end analytical solutions. Now, I’m focused on applying these skills to solve real-world business problems and grow into a full-time Data Analyst role.</p>
   </div>
 </section>
 
 
-<!-- PROJECTS -->
-<section id="projects" class="projects-section bg-light">
+<!-- Projects Section -->
+<section id="projects" class="projects-section bg-light" id="projects">
   <div class="container">
     <h2 class="text-center">Projects</h2>
-
-    <div class="row justify-content-center">
+    <!-- <div class="row"> -->
+      <div class="row justify-content-center">
+      <!-- Project 1 -->
       <div class="col-md-4 mb-4">
-        <div class="card text-center">
-          <img src="images/projects/1.jpg" class="card-img-top">
+        <div class="text-center">
+        <div class="card">
+          <img src="images/projects/1.jpg" class="card-img-top" alt="Project 1">
           <div class="card-body">
-            <h5 class="card-title">Supermart Retail Sales Analytics</h5>
-            <p class="card-text">Sales analytics, forecasting, KPIs and ML for Supermart dataset.</p>
-            <a href="https://github.com/deepikapriyak30/supermart-grocery-sales-analysis"
-               class="btn btn-secondary">View Source Code ↗</a>
+            <h5 class="card-title">Supermart Retail Sales Analytics (Python · SQL · Power BI)</h5>
+            <p class="card-text">Used Python, SQL, EDA, Power BI, and ML models to analyze grocery sales, uncover revenue drivers, customer behavior, and seasonal demand patterns. Designed dashboards, KPIs, and forecasting models to support data-driven decision-making.</p>
+            <!-- <a href="#" class="btn btn-primary">Blog Post</a> -->
+            <a href="https://github.com/deepikapriyak30/supermart-grocery-sales-analysis" class="btn btn-secondary">View Source Code ↗</a>
           </div>
+          </div>
+        </div>
+      </div>
+      <!-- Project 2 -->
+      <!-- <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="images/projects/2.jpg" class="card-img-top" alt="Project 2">
+          <div class="card-body">
+            <h5 class="card-title">Project 2</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl erat. Sed et purus ornare, eleifend tellus ut, fermentum arcu.</p>
+            <a href="#" class="btn btn-primary">Blog Post</a>
+            <a href="#" class="btn btn-secondary">Source Code</a>
+          </div>
+        </div>
+      </div> -->
+      <!-- Project 3 -->
+      <!-- <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="images/projects/3.jpg" class="card-img-top" alt="Project 3">
+          <div class="card-body">
+            <h5 class="card-title">Project 3</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl erat. Sed et purus ornare, eleifend tellus ut, fermentum arcu.</p>
+            <a href="#" class="btn btn-primary">Blog Post</a>
+            <a href="#" class="btn btn-secondary">Source Code</a>
+          </div> -->
         </div>
       </div>
     </div>
@@ -172,41 +270,108 @@
 </section>
 
 
-<!-- SKILLS -->
-<section id="skills" class="skills-section">
+<!-- Skills Section -->
+<section id="skills" class="skills-section bg-white" id="skills">
   <div class="container">
     <h2 class="text-center">Skills</h2>
-
     <div class="row">
+      <!-- Skill 1 -->
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="card">
-          <img src="images/skills/1.png" class="card-img-top">
+          <img src="images/skills/1.png" class="card-img-top" alt="Python">
           <div class="card-body">
             <h5 class="card-title">Python</h5>
-            <p class="card-text">Data cleaning, EDA, automation, ML.</p>
+            <p class="card-text">A versatile programming language I use for data cleaning, automation, EDA, and machine learning. I work with libraries such as Pandas, NumPy, Matplotlib, and Seaborn to process data and build analytical solutions.</p>
+            <a href="https://github.com/deepikapriyak30/portfolio/blob/main/images/certificate/certificate.jpg" class="btn btn-outline-primary">Link to certificate ↗</a>
+          </div>
+        </div>
+      </div>
+      <!-- Skill 2 -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card">
+          <img src="images/skills/2.png" class="card-img-top" alt="Data Visualization">
+          <div class="card-body">
+            <h5 class="card-title">Data Visualization</h5>
+            <p class="card-text">I create clear and meaningful visualizations using Power BI, Tableau, and Python libraries. My focus is on uncovering insights, identifying trends, and presenting data in a way that supports strong decision-making.</p>
+            <a href="https://github.com/deepikapriyak30/portfolio/blob/main/images/certificate/certificate.jpg" class="btn btn-outline-primary">Link to certificate ↗</a>
+          </div>
+        </div>
+      </div>
+      <!-- Skill 3 -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card">
+          <img src="images/skills/3.png" class="card-img-top" alt="SQL">
+          <div class="card-body">
+            <h5 class="card-title">SQL</h5>
+            <p class="card-text">Skilled in writing complex SQL queries for data extraction, joining tables, filtering records, and preparing datasets for analysis. Experienced in both MySQL and Oracle SQL for real-world business data tasks.</p>
+            <a href="https://github.com/deepikapriyak30/portfolio/blob/main/images/certificate/certificate.jpg" class="btn btn-outline-primary">Link to certificate ↗</a>
+          </div>
+        </div>
+      </div>
+      <!-- Skill 4 -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card">
+          <img src="images/skills/4.png" class="card-img-top" alt="Data Storytelling">
+          <div class="card-body">
+            <h5 class="card-title">Data Storytelling</h5>
+            <p class="card-text">I transform raw data into compelling stories by combining visuals, business context, and analytical thinking. My goal is to help stakeholders understand insights and make smarter decisions.</p>
+            <a href="https://github.com/deepikapriyak30/portfolio/blob/main/images/certificate/certificate.jpg" class="btn btn-outline-primary">Link to certificate ↗</a>
           </div>
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
-
-<!-- CONTACT -->
+<!-- Contact Me Section -->
 <section id="contact" class="contact-section text-center text-white bg-dark">
   <div class="container">
     <h2>Contact Me</h2>
-    <p>Email: deepikapriyak30@gmail.com</p>
-    <p>Phone: +91 9677708257</p>
-
-    <a href="https://www.linkedin.com/in/deepika-priya-k-1677231a9/">
-      <img src="icons/linkedin.png" class="social-icon"> LinkedIn
-    </a>
+    <div class="row">
+      <div class="col-lg-6">
+        <p><i class="fas fa-envelope"></i> 📧 Email: deepikapriyak30@gmail.com</p>
+      </div>
+      <div class="col-lg-6">
+        <p><i class="fas fa-phone"></i> 📱 Phone: +91 9677708257</p>
+      </div>
+    </div>
+    <!-- <div class="row"> -->
+      <div class="row justify-content-center">
+      <div class="col-lg-2 col-md-4 mb-4">
+        <a href="https://www.linkedin.com/in/deepika-priya-k-1677231a9/" target="_blank">
+          <img src="icons/linkedin.png" alt="LinkedIn" class="social-icon">
+          LinkedIn
+        </a>
+      </div>
+      <!-- <div class="col-lg-2 col-md-4 mb-4">
+        <a href="https://twitter.com/yourusername" target="_blank">
+          <img src="icons/twitter.png" alt="Twitter" class="social-icon">
+          Twitter
+        </a> 
+      </div> -->
+      <div class="col-lg-2 col-md-4 mb-4">
+        <a href="https://github.com/deepikapriyak30" target="_blank">
+          <img src="icons/github.png" alt="GitHub" class="social-icon">
+          GitHub
+        </a>
+      </div> 
+      <!-- <div class="col-lg-2 col-md-4 mb-4">
+        <a href="https://medium.com/@yourusername" target="_blank">
+          <img src="icons/medium.png" alt="Medium" class="social-icon">
+          Medium
+        </a>
+      </div> -->
+      <!-- <div class="col-lg-2 col-md-4 mb-4">
+        <a href="https://youtube.com/c/yourchannel" target="_blank">
+          <img src="icons/youtube.png" alt="YouTube" class="social-icon">
+          YouTube
+        </a>
+      </div> -->
+    </div>
   </div>
 </section>
 
-
+<!-- Bootstrap JS and dependencies (jQuery and Popper) -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.5/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
