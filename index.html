@@ -136,19 +136,14 @@ html {
 
 /* --- Brand title + tagline in navbar --- */
 .navbar-brand {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
-}
-
-.brand-title {
-  font-size: 1.25rem;
   font-weight: 600;
 }
 
 .brand-tagline {
   font-size: 0.75rem;
-  color: #d0d0d0;
+  font-weight: 400;
+  color: #dcdcdc;          /* softer than pure white */
+  margin-left: 0.35rem;
 }
 
 /* Small resume button in navbar */
@@ -337,9 +332,11 @@ html {
   <div class="container">
     <!-- <a class="navbar-brand" href="#about">Portfolio</a> -->
     <!-- Brand + Tagline -->
-    <a class="navbar-brand" href="#about">
-      <span class="brand-title">Portfolio</span>
-      <span class="brand-tagline">Data Analyst · Python | SQL | Power BI | Tableau</span>
+     <a class="navbar-brand" href="#about">
+       Portfolio
+      <span class="brand-tagline d-none d-md-inline">
+           · Data Analyst · Python | SQL | Power BI | Tableau
+      </span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
