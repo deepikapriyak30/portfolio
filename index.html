@@ -134,19 +134,34 @@ html {
   color: #f8f9fa; /* Slightly lighter white when hovering over links */
 }
 
+/* --- Brand title + tagline in navbar --- */
+.navbar-brand {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+  .brand-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.brand-tagline {
+  font-size: 0.75rem;
+  color: #d0d0d0;
+}
+
 /* Small resume button in navbar */
 .btn-resume {
   margin-left: 1rem;
   font-size: 0.8rem;
   padding: 0.25rem 0.8rem;
-  align-self: center;
 }
-  
+
 /* Media query for responsive navbar collapsing */
 @media (max-width: 992px) {
   .navbar-collapse {
     background-color: #343a40; /* Same as navbar color for seamless look */
-    align-items: center;
   }
 }
 
@@ -155,7 +170,7 @@ html {
 
 </head>
 <body>
- 
+
 <section id='about' class="about-section">
   <div class="container">
     <h2>About</h2>
@@ -320,7 +335,10 @@ html {
 <!-- Sticky Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="#about">Portfolio</a>
+    <a class="navbar-brand" href="#about">
+      <span class="brand-title">Portfolio</span>
+      <span class="brand-tagline">Data Analyst · Python | SQL | Power BI | Tableau</span>
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -341,14 +359,23 @@ html {
         <li class="nav-item">
           <a class="nav-link" href="#contact">Contact</a>
         </li>
+        <li>
+          <a href="files/Deepika_Priya_K_Resume.pdf"
+         class="btn btn-outline-light btn-sm btn-resume"
+         target="_blank">
+        Download Resume
+         </a>
+        </li>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
+
 
 <!-- Bootstrap JS and dependencies (jQuery and Popper) -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.5/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-</html>
+</html>  this is the code do this and download resume small button also add it
