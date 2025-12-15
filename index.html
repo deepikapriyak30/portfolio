@@ -48,6 +48,20 @@
   margin-bottom: 15px;
 }
 
+.card-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.card-desc {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+
 /* Additional CSS for Skills Section */
 .skills-section h2 {
   margin-bottom: 40px;
@@ -169,8 +183,8 @@ html {
   <div class="container">
     <h2>About</h2>
     <img src="images/about/1.jpg" alt="About Me">
-    <p>I am a Junior Data Analyst with hands-on experience in SQL, Python, Power BI, and Tableau, focused on turning business data into actionable insights.. I began my career as a Software Engineer working on SQL/PLSQL-based data operations, workflow automation, and custom dashboards, which sparked my interest in data.</p>
-    <p>I have since completed analytics internships where I gained hands-on experience in data cleaning, visualization, forecasting, and building end-to-end analytical solutions. Now, I’m focused on applying these skills to solve real-world business problems and grow into a full-time Data Analyst role.</p>
+    <p>I am a Junior Data Analyst with hands-on experience in SQL, Python, Power BI, and Tableau, focused on turning business data into actionable insights. I began my career as a Software Engineer working on SQL/PLSQL-based data operations, which sparked my interest in analytics.</p>
+    <p>I have since completed analytics projects and internships involving data cleaning, visualization, forecasting, and machine learning, and I am now focused on growing into a full-time Data Analyst role.</p>
   </div>
 </section>
 
@@ -188,14 +202,24 @@ html {
           <img src="images/projects/1.jpg" class="card-img-top" alt="Project 1">
           <div class="card-body">
             <h5 class="card-title">Supermart Retail Sales Analytics (Python · SQL · Power BI)</h5>
-            <p class="card-text"><h6>Problem</h6>
-                                  Limited visibility into sales performance and customer buying patterns.
-                                                
-                                  <h6>Analysis</h6>
-                                  Analyzed retail sales data using SQL and Python; built Power BI dashboards to track KPIs and seasonal trends.
-                                                
-                                  <h6>Impact</h6>
-                                  Enabled better inventory planning, pricing decisions, and regional performance insights.</p>
+             <div class="card-body">
+            <h5 class="card-title">IBM HR Analytics-Attrition & Performance (Python · SQL · Tableau · ML)</h5>
+            <div class="card-text">
+                  <h6 class="card-label">Problem</h6>
+                  <p class="card-desc">
+                    Limited visibility into sales performance and customer buying behavior.
+                  </p>
+                
+                  <h6 class="card-label">Analysis</h6>
+                  <p class="card-desc">
+                    Analyzed retail sales data using SQL and Python; built Power BI dashboards to track KPIs and seasonal trends.
+                  </p>
+                
+                  <h6 class="card-label">Impact</h6>
+                  <p class="card-desc">
+                    Enabled data-driven inventory planning, pricing decisions, and regional performance optimization.
+                  </p>
+            </div>
             <!-- <a href="#" class="btn btn-primary">Blog Post</a> -->
              <!-- ADD THIS CREDIT LINE (small, subtle) -->
               <p class="text-muted" style="font-size: 12px;">
@@ -212,14 +236,22 @@ html {
           <img src="images/projects/2.jpg" class="card-img-top" alt="Project 2">
           <div class="card-body">
             <h5 class="card-title">IBM HR Analytics-Attrition & Performance (Python · SQL · Tableau · ML)</h5>
-            <p class="card-text"><h6>Problem</h6>
-                                  HR teams lacked clarity on key drivers of employee attrition.
-                                  
-                                  <h6>Analysis</h6>
-                                  Performed EDA and built ML models using Python to predict churn and analyze attrition factors.
-
-                                  <h6>Impact</h6>
-                                  Identified high-risk employee segments to support targeted retention strategies.</p>
+            <div class="card-text">
+                  <h6 class="card-label">Problem</h6>
+                  <p class="card-desc">
+                    HR teams lacked clarity on key drivers of employee attrition.
+                  </p>
+                
+                  <h6 class="card-label">Analysis</h6>
+                  <p class="card-desc">
+                    Performed EDA and built machine learning models in Python to identify churn patterns and high-risk segments.
+                  </p>
+                
+                  <h6 class="card-label">Impact</h6>
+                  <p class="card-desc">
+                    Enabled targeted retention strategies by highlighting critical attrition drivers and vulnerable employee groups.
+                  </p>
+            </div>
             <!-- <a href="#" class="btn btn-primary">Blog Post</a> -->
             <!-- ADD THIS CREDIT LINE (small, subtle) -->
               <p class="text-muted" style="font-size: 12px;">
@@ -235,14 +267,22 @@ html {
           <img src="images/projects/3.jpg" class="card-img-top" alt="Project 3">
           <div class="card-body">
             <h5 class="card-title">Customer Support Ticket Satisfaction Analysis (NLP & ML)</h5>
-            <p class="card-text"><h6>Problem</h6>
-                                  Support teams struggled to detect dissatisfied customers early.
-                                  
-                                  <h6>Analysis</h6>
-                                  Engineered response-time features and applied NLP embeddings with ML models to predict low satisfaction.
-                                  
-                                  <h6>Impact</h6>
-                                  Improved ticket prioritization, SLA monitoring, and customer experience outcomes.</p>
+            <div class="card-text">
+                  <h6 class="card-label">Problem</h6>
+                  <p class="card-desc">
+                    Support teams struggled to identify dissatisfied customers early.
+                  </p>
+                
+                  <h6 class="card-label">Analysis</h6>
+                  <p class="card-desc">
+                    Engineered response-time features and applied NLP embeddings with ML models to predict low satisfaction.
+                  </p>
+                
+                  <h6 class="card-label">Impact</h6>
+                  <p class="card-desc">
+                    Improved ticket prioritization, SLA monitoring, and overall customer experience.
+                  </p>
+            </div>
             <!-- <a href="#" class="btn btn-primary">Blog Post</a> -->
              <!-- ADD THIS CREDIT LINE (small, subtle) -->
               <p class="text-muted" style="font-size: 12px;">
@@ -269,7 +309,7 @@ html {
           <img src="images/skills/1.png" class="card-img-top" alt="Python">
           <div class="card-body">
             <h5 class="card-title">Python</h5>
-            <p class="card-text">Python for data cleaning, EDA, feature engineering, automation, and basic machine learning using Pandas, NumPy, Matplotlib, and Seaborn.</p>
+            <p class="card-text">Used Python for data cleaning, EDA, feature engineering, automation, and basic machine learning using Pandas, NumPy, Matplotlib, and Seaborn.</p>
             <a href="https://github.com/deepikapriyak30/portfolio/blob/main/images/certificate/certificate.jpg" class="btn btn-outline-primary">Link to certificate ↗</a>
           </div>
         </div>
@@ -280,7 +320,7 @@ html {
           <img src="images/skills/2.png" class="card-img-top" alt="Data Visualization">
           <div class="card-body">
             <h5 class="card-title">Data Visualization</h5>
-            <p class="card-text">Created interactive dashboards and reports using Power BI and Tableau to track KPIs, trends, and business performance.</p>
+            <p class="card-text">Built interactive dashboards and reports using Power BI and Tableau to track KPIs, trends, and business performance.</p>
             <a href="https://github.com/deepikapriyak30/portfolio/blob/main/images/certificate/certificate.jpg" class="btn btn-outline-primary">Link to certificate ↗</a>
           </div>
         </div>
@@ -302,7 +342,7 @@ html {
           <img src="images/skills/4.png" class="card-img-top" alt="Data Storytelling">
           <div class="card-body">
             <h5 class="card-title">Data Storytelling</h5>
-            <p class="card-text">Converted analytical findings into clear business insights using visuals, metrics, and structured explanations for stakeholders.</p>
+            <p class="card-text">Translated analytical findings into clear business insights using visuals, metrics, and structured explanations for stakeholders.</p>
             <a href="https://github.com/deepikapriyak30/portfolio/blob/main/images/certificate/certificate.jpg" class="btn btn-outline-primary">Link to certificate ↗</a>
           </div>
         </div>
